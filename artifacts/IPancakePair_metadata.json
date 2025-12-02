@@ -1,0 +1,76 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getReserves",
+				"outputs": [
+					{
+						"internalType": "uint112",
+						"name": "",
+						"type": "uint112"
+					},
+					{
+						"internalType": "uint112",
+						"name": "",
+						"type": "uint112"
+					},
+					{
+						"internalType": "uint32",
+						"name": "",
+						"type": "uint32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "sync",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IPancakePair.sol": "IPancakePair"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IPancakePair.sol": {
+			"keccak256": "0x4bf2ad989e0ab1ebe8024493be78d0c3f3a9278d7f149ead4ae90a49c00792ca",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://60f6ba07a5788c6ab5ca860b2ca9d2f2a007c6e3c471f215ddcae749ac368080",
+				"dweb:/ipfs/QmcutkBXdpqfyMKXgpuR5ioBYNeLqpZoVm44reMkco4Zkr"
+			]
+		}
+	},
+	"version": 1
+}
