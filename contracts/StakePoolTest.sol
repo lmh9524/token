@@ -25,6 +25,17 @@ contract StakePoolTest is Initializable, OwnableUpgradeable, UUPSUpgradeable {
     event Reward(uint256 id, address to, address payer, address token, uint256 amount);
     event Stake(address user, uint256 amount, uint256 usdtAmount, uint256 veilAmount);
 
+    // 配置 USDT 权重（/10000）
+    function setUSDTWeight(uint256 _weight) external onlyOwner {
+        require(_weight <= 10000, "err usdt weight");
+        USDTWeight = _weight;
+    }
+
+    // 配置自动买 VEIL 的比例（/100）
+    function setBuyVEILWeight(uint256 _weight) external onlyOwner {
+        require(_weight <= 100, "err buy veil weight");
+        BuyVEILWeight = _weight;
+    }
     // 入单
     function stake(uint256 amount) external {
         require(amount % 100e18 == 0, "err stake amount");
@@ -115,15 +126,15 @@ contract StakePoolTest is Initializable, OwnableUpgradeable, UUPSUpgradeable {
 
     // 初始化时注入 Router / USDT / VEIL 地址
     function initialize(
-        address initialOwner,chrome-extension://pbpjkcldjiffchgbbndmhojiacbgflha/static/images/icon-32.png
+        address initialOwner,
         address router,
         address usdt,
         address veil
     ) public initializer {
         __Ownable_init(initialOwner);
         SwapRouter = ISwapRouter(router);
-        USDTToken  = IERC20(usdt);
-        VEILToken  = IVEILToken(veil);chrome-extension://pbpjkcldjiffchgbbndmhojiacbgflha/static/images/icon-32.png
+        USDTToken = IERC20(usdt);
+        VEILToken = IVEILToken(veil);
 
         // 给 Router 授权 USDT
         USDTToken.approve(router, type(uint).max);
