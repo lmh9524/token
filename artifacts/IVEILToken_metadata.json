@@ -249,7 +249,7 @@
 		"compilationTarget": {
 			"contracts-real/VeilXStake.sol": "IVEILToken"
 		},
-		"evmVersion": "prague",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
