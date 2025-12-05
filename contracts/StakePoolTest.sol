@@ -38,7 +38,7 @@ contract StakePoolTest is Initializable, OwnableUpgradeable, UUPSUpgradeable {
     }
     // 入单
     function stake(uint256 amount) external {
-        require(amount % 100e18 == 0, "err stake amount");
+        require(amount > 0, "err stake amount");
         if (USDTWeight == 10000) { // 纯USDT入单
             if (BuyVEILWeight == 0) {
                 USDTToken.transferFrom(msg.sender, foundation, amount);

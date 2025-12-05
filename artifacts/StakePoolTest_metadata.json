@@ -709,11 +709,11 @@
 			]
 		},
 		"contracts/StakePoolTest.sol": {
-			"keccak256": "0x48c95778767f5d0dd0f50c58aadbef45ed94925e0ff1d0a7b2b370d953920077",
+			"keccak256": "0x2b2aa25b8ffe4022b4fd1de1849d370f20fd449477d063e4ae4860ffc50457d8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8dabe5903ead1478bc82192487ef5bb7c4da7121759a0c2130c0ba66e12f359d",
-				"dweb:/ipfs/QmPizfCcGxd8nWJwUmQbo5xTvcBLB9ugNiCwEJkchh378K"
+				"bzz-raw://c9a46aefe5264745464bf7d99b142bff4a27def5ca0de25392fec84e0d868873",
+				"dweb:/ipfs/QmcSUsLpEnQyi1rvhMEtpNwmULYpWNCa5bzaGS9LiPN75S"
 			]
 		}
 	},

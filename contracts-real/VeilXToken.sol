@@ -1,17 +1,20 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.30;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts@5.4.0/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts@5.4.0/access/Ownable.sol";
 
 contract VeilXToken is ERC20, Ownable {
-    ISwapRouter immutable public SwapRouter;
+    ISwapRouter immutable public SwapRouter=ISwapRouter(0x10ED43C718714eb63d5aA57B78B54704E256024E);
     AutoSwap immutable autoSwap = new AutoSwap();
 
-    address immutable public USDTToken;
+    address immutable public USDTToken=0x55d398326f99059fF775485246999027B3197955;
     address public immutable basePair;
+    //基金会  1%买税收款地址
     address public foundation ;
+    //实验室  1%卖税收款地址
     address public labAddress ;
+    //市场    5%盈利税收款地址
     address public marketAddress ;
     
     mapping(address => uint256) public tOwnedU;
@@ -39,13 +42,10 @@ contract VeilXToken is ERC20, Ownable {
     }
 
     constructor(
-        address router,
-        address usdt,
         address _foundation,
         address _lab,
-        address _market,
-        uint256 _totalSupply
-    ) ERC20("VeilX", "VEIL") Ownable(msg.sender) {
+        address _market
+    ) ERC20("VEILX", "VEILX") Ownable(msg.sender) {
 
         foundation=_foundation;
         labAddress=_lab;
@@ -54,10 +54,8 @@ contract VeilXToken is ERC20, Ownable {
         isWL[_lab] = true;
         isWL[address(autoSwap)] = true;
 
-        _mint(labAddress, _totalSupply);
+        _mint(labAddress, 310000000e18);
 
-        SwapRouter = ISwapRouter(router);
-        USDTToken = usdt;
         basePair = ISwapFactory(SwapRouter.factory()).createPair(
             address(this),
             USDTToken
@@ -206,13 +204,14 @@ contract VeilXToken is ERC20, Ownable {
         super._update(stakeAddress,to,amount);
     }
 
-
+    //设置税率  _buy 买税，_sell 卖税  _profitFee 盈利税
     function setFee(uint256 _buy,uint256 _sell,uint256 _profitFee) external onlyOwner{
         buyFee=_buy;
         sellFee=_sell;
         profitFee=_profitFee;
     }
 
+    //批量设置白名单
     function multisetWL(address[] memory users, bool flag) external onlyOwner {
         for (uint i; i < users.length; ) {
             isWL[users[i]] = flag;
@@ -221,10 +220,13 @@ contract VeilXToken is ERC20, Ownable {
             }
         }
     }
+
+    //设置销毁比例
     function setBurnLimit(uint256 limit) external onlyOwner{
         burnLimit=limit;
     }
 
+    //设置Stake地址
     function setStakeAddress(address stake) external onlyOwner {
         if (stakeAddress != address(0)) {
             isWL[stakeAddress] = false;
@@ -233,11 +235,13 @@ contract VeilXToken is ERC20, Ownable {
         isWL[stakeAddress] = true;
     }
 
+    //启动交易 _buy true 启动购买  _sell 启动卖出
     function launch(bool _buy,bool _sell) external onlyOwner {
         launchBuy = _buy;
         launchSell=_sell;
     }
 
+    //修改地址
     function setAddress(address _foundation,address _lab,address _market) external onlyOwner{
         foundation=_foundation;
         labAddress=_lab;
@@ -300,5 +304,3 @@ interface ISwapFactory {
         address tokenB
     ) external returns (address pair);
 }
-
-

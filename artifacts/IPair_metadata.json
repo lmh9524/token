@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "sync",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IPair.sol": "IPair"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IPair.sol": {
+			"keccak256": "0xe636bca8a15f1bf6ff43a00cc96b67b2ebc2fa4b5441df551d51d7da10c16938",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a7d1a52bc3f973a086e61101e26d9bee26771d72a9bbe75b84d4ea2bc8ee0ded",
+				"dweb:/ipfs/QmUSGddDjwKzeVZLdNmnBXmyDZussW28xCPsPVvq9ptgWq"
+			]
+		}
+	},
+	"version": 1
+}
