@@ -247,7 +247,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/StakePoolTest.sol": "IVEILToken"
+			"contracts-real/VeilXStake.sol": "IVEILToken"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -255,7 +255,7 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": false,
+			"enabled": true,
 			"runs": 200
 		},
 		"remappings": []
@@ -357,12 +357,12 @@
 				"dweb:/ipfs/QmeCfPykghhMc81VJTrHTC7sF6CRvaA1FXVq2pJhwYp1dV"
 			]
 		},
-		"contracts/StakePoolTest.sol": {
-			"keccak256": "0x2b2aa25b8ffe4022b4fd1de1849d370f20fd449477d063e4ae4860ffc50457d8",
+		"contracts-real/VeilXStake.sol": {
+			"keccak256": "0xfb8fce1e79a4b433d4b143ab5f2f3a6a8d879cb46302300ecdc1c6fec0dd2ec4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c9a46aefe5264745464bf7d99b142bff4a27def5ca0de25392fec84e0d868873",
-				"dweb:/ipfs/QmcSUsLpEnQyi1rvhMEtpNwmULYpWNCa5bzaGS9LiPN75S"
+				"bzz-raw://386b14e9add27aa9b1f8108f018a6a71ad470d6d2b77909ec4dd802597254984",
+				"dweb:/ipfs/QmUrVj8KrT5uVFM5mP8gJZEQCsRK9izqnBj3a7s5fm9E6V"
 			]
 		}
 	},
