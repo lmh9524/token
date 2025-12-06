@@ -143,9 +143,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts-real/VeilXToken.sol": "AutoSwap"
+			"contracts/VeilXToken2.sol": "AutoSwap"
 		},
-		"evmVersion": "prague",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -205,7 +205,7 @@
 				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
 			]
 		},
-		"contracts-real/VeilXToken.sol": {
+		"contracts/VeilXToken2.sol": {
 			"keccak256": "0x69c6a42241b9d8443afb67f600e343977e96b94696bda3e079eabbd49df2bb53",
 			"license": "MIT",
 			"urls": [

@@ -1,0 +1,12 @@
+{
+  "id": 56,
+  "network": "BNB Smart Chain Mainnet",
+  "deployments": {
+    "0x62D8A251130599a9500D513572af5939b6979C15": {
+      "date": "2025-12-05T16:14:19.061Z",
+      "contractName": "StakePool",
+      "fork": "london",
+      "implementationAddress": "0x51025408958F3238F03e8146BB5D8ca675f816e8"
+    }
+  }
+}
