@@ -97,8 +97,8 @@ contract VeilXToken is ERC20, Ownable {
             uint256 sellFeesAmount = amount * sellFee / 10000;
             address[] memory buyPath = new address[](2);
             
-            buyPath[0] = USDTToken;
-            buyPath[1] = address(this);
+            buyPath[0] = address(this);
+            buyPath[1] = USDTToken;
 
             uint256 amountUOut = SwapRouter.getAmountsOut(
                 amount - sellFeesAmount,

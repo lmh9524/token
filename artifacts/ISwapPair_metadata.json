@@ -26,7 +26,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/VeilXToken2.sol": "ISwapPair"
+			"contracts-real/VeilXToken.sol": "ISwapPair"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -88,12 +88,12 @@
 				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
 			]
 		},
-		"contracts/VeilXToken2.sol": {
-			"keccak256": "0x69c6a42241b9d8443afb67f600e343977e96b94696bda3e079eabbd49df2bb53",
+		"contracts-real/VeilXToken.sol": {
+			"keccak256": "0x46031f764b6313d43dc9d5cde69bfd0f5be424f6baca666fc7ea51806d3a87f3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d697dde40965f9463178a288da1ef530367d234f8a165f11077c3dbba83c32ea",
-				"dweb:/ipfs/QmUVyA7MQP4GFffL8XQobRwnfSbYREXqtn5yMB1GY9jgNr"
+				"bzz-raw://2634c7edc0a83e57fdc08ce9c2ae83cc894743308386f7b776d300ca5eca5ca3",
+				"dweb:/ipfs/QmbrThFxccDQx8LaZof2x8PaTTiMiQ1qbyYFcyCWFm4hTm"
 			]
 		}
 	},

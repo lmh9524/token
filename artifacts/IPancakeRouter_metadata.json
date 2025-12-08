@@ -202,13 +202,13 @@
 		"compilationTarget": {
 			"contracts/IPancakeRouter.sol": "IPancakeRouter"
 		},
-		"evmVersion": "prague",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": false,
+			"enabled": true,
 			"runs": 200
 		},
 		"remappings": []

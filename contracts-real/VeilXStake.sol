@@ -21,7 +21,7 @@ contract StakePool is Initializable, OwnableUpgradeable, UUPSUpgradeable{
     IERC20 immutable USDTToken=IERC20(0x55d398326f99059fF775485246999027B3197955);
 
     //这里需要替换 部署好的VEIL 代币地址
-    IVEILToken immutable VEILToken=IVEILToken(0x09445A01d0AAE6Cb5caE52292b2f92afD85C8858);
+    IVEILToken immutable VEILToken=IVEILToken(0xB16f9b3eadd18BaF49DDeCbFC8562AB297901466);
     event Reward(uint256 id,address to,address payer,address token,uint256 amount);
     event Stake(address user,uint256 amount,uint256 usdtAmount,uint256 veilAmount);
 
