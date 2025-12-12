@@ -1,6 +1,6 @@
 {
   "name": "StakePool",
-  "address": "0xeF85eaf3278732AD3e97C0550dDC6d2d0139a435",
+  "address": "0x192C2aD210d3C977e74fbF814909B95984438F96",
   "abi": [
     {
       "inputs": [],
@@ -551,5 +551,5 @@
     }
   ],
   "filePath": "token-1764742277475/contracts-real/VeilXStake2.sol",
-  "pinnedAt": 1765398121055
+  "pinnedAt": 1765442463113
 }

@@ -1,6 +1,6 @@
 {
   "name": "VeilXToken",
-  "address": "0x7dE2B85eDCCBF9818F7D66D331e5BCf70a0ea71a",
+  "address": "0x9C79B4a12eF8176B6a61142408A54Edf8336b0A6",
   "abi": [
     {
       "inputs": [
@@ -310,6 +310,19 @@
         }
       ],
       "name": "setFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "rate",
+          "type": "uint256"
+        }
+      ],
+      "name": "setSellBurnRate",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -766,5 +779,5 @@
     }
   ],
   "filePath": "token-1764742277475/contracts-real/VeilXToken.sol",
-  "pinnedAt": 1765084452911
+  "pinnedAt": 1765442462441
 }

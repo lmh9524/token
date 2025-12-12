@@ -247,7 +247,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts-real/VeilXStake.sol": "IVEILToken"
+			"contracts-real/VeilXStake2.sol": "IVEILToken"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -357,12 +357,12 @@
 				"dweb:/ipfs/QmeCfPykghhMc81VJTrHTC7sF6CRvaA1FXVq2pJhwYp1dV"
 			]
 		},
-		"contracts-real/VeilXStake.sol": {
-			"keccak256": "0xfd9ae29e61f76ae702e0b244d43ae8635ff8cd81ca34a657db3eede3f0933193",
+		"contracts-real/VeilXStake2.sol": {
+			"keccak256": "0x192ffa552c67d1e811df8cf4132c3897e2a4c9b4cfc1851492d841fd21dd772c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://534f19196b7be6baaa180d03ab231e6a7a70a9380132f6dca7ada313dbf87336",
-				"dweb:/ipfs/QmQGN94HVodfiyXhe858JuCZSTpegoqQnZXqPenSJQ4h8x"
+				"bzz-raw://0bd7e7fecd8a3a081a2188b2e6f1a028f93542df56ff849d4e4d49b8cc553f74",
+				"dweb:/ipfs/QmRMfzHkXZB98WLce2bXHuhc7XPdV8ev6D1p8zqPYvmzoo"
 			]
 		}
 	},

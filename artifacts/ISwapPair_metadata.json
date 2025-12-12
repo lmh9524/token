@@ -89,11 +89,11 @@
 			]
 		},
 		"contracts-real/VeilXToken.sol": {
-			"keccak256": "0x46031f764b6313d43dc9d5cde69bfd0f5be424f6baca666fc7ea51806d3a87f3",
+			"keccak256": "0x0c26488b71082c32d5bf570aa1d09a40cd32f2b965d3e4075e83b6bf42010806",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2634c7edc0a83e57fdc08ce9c2ae83cc894743308386f7b776d300ca5eca5ca3",
-				"dweb:/ipfs/QmbrThFxccDQx8LaZof2x8PaTTiMiQ1qbyYFcyCWFm4hTm"
+				"bzz-raw://3b10c6ba3e9d56906a1c0f6b5c107cad465c875e1eddf7a9e389485644b6a888",
+				"dweb:/ipfs/QmfU7XAX1NTBE4cMsDJq9bekEQm6kvBWHbgCXGtWxNqeEu"
 			]
 		}
 	},

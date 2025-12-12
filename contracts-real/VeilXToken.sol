@@ -211,6 +211,12 @@ contract VeilXToken is ERC20, Ownable {
         profitFee=_profitFee;
     }
 
+    //设置销毁比例  单位 /10000，例如 2500 = 25%
+    function setSellBurnRate(uint256 rate) external onlyOwner{
+        require(rate <= 10000, "rate must <= 10000");
+        sellBurnRate = rate;
+    }
+
     //批量设置白名单
     function multisetWL(address[] memory users, bool flag) external onlyOwner {
         for (uint i; i < users.length; ) {
