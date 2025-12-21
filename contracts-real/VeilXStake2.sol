@@ -23,6 +23,7 @@ contract StakePool is Initializable, OwnableUpgradeable, UUPSUpgradeable{
 
     // 主网 VEILX 代币地址
     IVEILToken immutable VEILToken=IVEILToken(0x9C79B4a12eF8176B6a61142408A54Edf8336b0A6);
+    mapping(uint256 orderId=>bool used)public orderIdStatus;	
     event Reward(uint256 id,address to,address payer,address token,uint256 amount);
     event Stake(address user,uint256 amount,uint256 usdtAmount,uint256 veilAmount);
 
@@ -76,6 +77,8 @@ contract StakePool is Initializable, OwnableUpgradeable, UUPSUpgradeable{
         require(users.length==payers.length,"err u p len");
         require(users.length==tokens.length,"err u t len");
         require(users.length==amounts.length,"err u a len");
+        require(!orderIdStatus[orderId],"order id used");
+        orderIdStatus[orderId]=true;
         for(uint i;i<users.length;){
             if(payers[i]==address(this)||payers[i]==address(0)){
                 if(tokens[i]==address(VEILToken)){
@@ -93,12 +96,12 @@ contract StakePool is Initializable, OwnableUpgradeable, UUPSUpgradeable{
                 }
                 
             }
+
+            emit Reward(orderId,users[i],payers[i],tokens[i],amounts[i]);
             
             unchecked{
                 i++;
             }
-
-            emit Reward(orderId,users[i],payers[i],tokens[i],amounts[i]);
         }
     }
 
@@ -112,6 +115,8 @@ contract StakePool is Initializable, OwnableUpgradeable, UUPSUpgradeable{
     function multiSendReward2(uint256 orderId,address[] memory users,address[] memory payers,uint256[] memory amounts) external onlyAdmin{
         require(users.length==payers.length,"err u p len");
         require(users.length==amounts.length,"err u a len");
+        require(!orderIdStatus[orderId],"order id used");
+        orderIdStatus[orderId]=true;
         address []memory path=new address[](2);
         path[0]=address(VEILToken);
         path[1]=address(USDTToken);

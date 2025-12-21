@@ -1,6 +1,6 @@
 {
   "name": "StakePool",
-  "address": "0xfc7bcB920A034eFea52E325Bc6364A99DE91c62b",
+  "address": "0xBf3aF3B9742Fc637EbA8F590a8455f8B7435F607",
   "abi": [
     {
       "inputs": [],
@@ -38,6 +38,13 @@
       "inputs": [],
       "name": "FailedCall",
       "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "flushApprove",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
     },
     {
       "inputs": [
@@ -91,6 +98,34 @@
       "type": "function"
     },
     {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "orderId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address[]",
+          "name": "users",
+          "type": "address[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "payers",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "amounts",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "multiSendReward2",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
       "inputs": [],
       "name": "NotInitializing",
       "type": "error"
@@ -116,88 +151,6 @@
       ],
       "name": "OwnableUnauthorizedAccount",
       "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "renounceOwnership",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "user",
-          "type": "address"
-        },
-        {
-          "internalType": "bool",
-          "name": "flag",
-          "type": "bool"
-        }
-      ],
-      "name": "setAdmin",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "_weight",
-          "type": "uint256"
-        }
-      ],
-      "name": "setBuyVEILWeight",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "user",
-          "type": "address"
-        }
-      ],
-      "name": "setFoundation",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "amount",
-          "type": "uint256"
-        }
-      ],
-      "name": "stake",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "newImplementation",
-          "type": "address"
-        },
-        {
-          "internalType": "bytes",
-          "name": "data",
-          "type": "bytes"
-        }
-      ],
-      "name": "upgradeToAndCall",
-      "outputs": [],
-      "stateMutability": "payable",
-      "type": "function"
     },
     {
       "inputs": [],
@@ -248,6 +201,13 @@
       "type": "event"
     },
     {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
       "anonymous": false,
       "inputs": [
         {
@@ -285,6 +245,100 @@
       "type": "event"
     },
     {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "payer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "totalAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "veilAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Reward2",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "flag",
+          "type": "bool"
+        }
+      ],
+      "name": "setAdmin",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_weight",
+          "type": "uint256"
+        }
+      ],
+      "name": "setBuyVEILWeight",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "setFoundation",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "setFoundation2",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
       "inputs": [
         {
           "internalType": "uint256",
@@ -293,6 +347,19 @@
         }
       ],
       "name": "setUSDTWeight",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "stake",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -355,6 +422,24 @@
       "type": "event"
     },
     {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newImplementation",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "upgradeToAndCall",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
       "inputs": [],
       "name": "BuyVEILWeight",
       "outputs": [
@@ -381,6 +466,19 @@
       "type": "function"
     },
     {
+      "inputs": [],
+      "name": "foundation2",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
       "inputs": [
         {
           "internalType": "address",
@@ -393,6 +491,25 @@
         {
           "internalType": "bool",
           "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "orderId",
+          "type": "uint256"
+        }
+      ],
+      "name": "orderIdStatus",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "used",
           "type": "bool"
         }
       ],
@@ -452,6 +569,6 @@
       "type": "function"
     }
   ],
-  "filePath": "token-1764742277475/contracts-real/VeilXStake.sol",
-  "pinnedAt": 1765085506826
+  "filePath": "token-1764742277475/contracts-real/VeilXStake2.sol",
+  "pinnedAt": 1765952931756
 }

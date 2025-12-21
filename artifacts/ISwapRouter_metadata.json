@@ -217,11 +217,11 @@
 			]
 		},
 		"contracts-real/VeilXStake2.sol": {
-			"keccak256": "0x192ffa552c67d1e811df8cf4132c3897e2a4c9b4cfc1851492d841fd21dd772c",
+			"keccak256": "0x6eeec4f6ee75ecc58b1814534b70ea8054085a21a15654148c60d651c40b5e5e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0bd7e7fecd8a3a081a2188b2e6f1a028f93542df56ff849d4e4d49b8cc553f74",
-				"dweb:/ipfs/QmRMfzHkXZB98WLce2bXHuhc7XPdV8ev6D1p8zqPYvmzoo"
+				"bzz-raw://a4b1e116099c409ae3131e9d7f17ea6f30ca1e7b18e29c2f4e64827ec1126ae0",
+				"dweb:/ipfs/QmaWN8nxBed7XAYhNCrHLPkaUPmW8QWhfMEzFLxmp8Z7pn"
 			]
 		}
 	},
