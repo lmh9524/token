@@ -82,7 +82,7 @@ contract StakePool is Initializable, OwnableUpgradeable, UUPSUpgradeable{
         for(uint i;i<users.length;){
             if(payers[i]==address(this)||payers[i]==address(0)){
                 if(tokens[i]==address(VEILToken)){
-                    VEILToken.stakeTransfer(users[i], amounts[i]);
+                    VEILToken.transfer(users[i], amounts[i]);
                 }else{
                     IERC20(tokens[i]).transfer(users[i],amounts[i]);
                 }
@@ -90,7 +90,7 @@ contract StakePool is Initializable, OwnableUpgradeable, UUPSUpgradeable{
             }else{
                 if(tokens[i]==address(VEILToken)){
                     VEILToken.transferFrom(payers[i], address(this), amounts[i]);
-                    VEILToken.stakeTransfer(users[i], amounts[i]);
+                    VEILToken.transfer(users[i], amounts[i]);
                 }else{
                     IERC20(tokens[i]).transferFrom(payers[i],users[i],amounts[i]);
                 }
